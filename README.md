@@ -19,7 +19,7 @@ This react app is built to take admission in **Yoga classes** by filling the adm
 
 ## FEATURES
 <ul>
-  <li>Fully Mobile reponsive web app</li> 
+  <li>Fully reponsive web app.</li> 
   <li>Accept user data and check basic validations like age (between 18 to 65, inclusive), a valid mobile number, and name.</li>
   <li>Store data in the database.</li>
   <li>Payment option is added. (Mock completed Payment() is used)</li>
@@ -29,7 +29,7 @@ This react app is built to take admission in **Yoga classes** by filling the adm
 </ul>
 
 ## SCREENSHOTS
-### 1. Homepage.
+### 1. Homepage
 **Click on `Register Now!` to fill the admission form.**
 
 ![1](https://user-images.githubusercontent.com/84512702/207722842-7cec6e55-6b58-4b39-96f8-c5d2bf6d1bc8.png)
