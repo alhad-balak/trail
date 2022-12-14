@@ -157,6 +157,7 @@ export default function Payment({ handleClose, setDialogBox }) {
                                 error
                                 id="outlined-error"
                                 label="Expiry Date"
+                                helperText="Enter a valid Expiry Date"
                                 type="date"
                                 onChange={(e) => setPaymentDetails({ ...paymentDetails, expirydate: e.target.value })}
                                 onBlur={() => { checkDateValidation(); }}
