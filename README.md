@@ -5,7 +5,7 @@
 ## INTRODUCTION
 This react app is built to take admission in **Yoga classes** by filling the admission form and making payment on monthly. To begin the process, user has to click on `REGISTER NOW!` button. 
 
-## TECHNOLOGY USED
+## TECHNOLOGIES USED
 <ol>
   <li>React.js</li>
   <li>Node.js</li>
@@ -14,7 +14,7 @@ This react app is built to take admission in **Yoga classes** by filling the adm
   <li>Material UI</li>
 </ol>
 
-## ER DIAGRAM (including to be added features)
+## ER DIAGRAM (including features to be added)
 ![ERD](https://user-images.githubusercontent.com/84512702/207719279-7c8d80c4-94ed-4b4c-aa52-6dac2a5f0478.png)
 
 ## FEATURES
@@ -29,9 +29,34 @@ This react app is built to take admission in **Yoga classes** by filling the adm
 </ul>
 
 ## SCREENSHOTS
+### 1. Homepage.
+**Click on `Register Now!` to fill the admission form.**
+
+![1](https://user-images.githubusercontent.com/84512702/207722842-7cec6e55-6b58-4b39-96f8-c5d2bf6d1bc8.png)
+
+### 2. Admission Form
+![4](https://user-images.githubusercontent.com/84512702/207723177-d2026683-0021-48a6-84bd-e549c3950c1d.png)
+
+### 3. Admission Form (with invalid details, to check validations)
+![2](https://user-images.githubusercontent.com/84512702/207722941-e88d2b35-61b4-4565-8f77-e2c3e5ba592e.png)
+
+### 4. Payment Screen
+![3](https://user-images.githubusercontent.com/84512702/207723056-167e1cf5-dc46-4c8b-9cc9-4f50e365823e.png)
+
+### 5. (Mock) Payment Successful and Admission Form submitted screen
+![5](https://user-images.githubusercontent.com/84512702/207723335-009197d1-19e8-4b85-a85d-fdd731bf10d5.png)
+
 
 ## FEATURES TO BE ADDED
-
+To improve user experience and performance, the following features can be added to this App:
+<ul>
+  <li>Login and SignUp features can be added to improve the security of the form.</li>
+  <li>Admission process for multiple months can be added.</li>
+  <li>The feature for batch shifting either in the middle or starting of the month can be added.</li>
+  <li>Payment for the multiple months can be facilitated.</li>
+  <li>Voucher codes and Payment GateWay facility can be added for payment.</li>
+  <li>The feature of admission fees payment in the instalment for users can be added.</li>
+</ul>
 
 
 <hr>
