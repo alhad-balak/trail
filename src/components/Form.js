@@ -86,11 +86,14 @@ export default function Form({ handleClose, setDialogBox }) {
                     Admission Form
                 </Typography>
             </DialogTitle>
-            <DialogContent>
+            <DialogContent sx={{ mb: 0 }}>
                 <Box
                     component="form"
                     sx={{
-                        '& .MuiTextField-root': { m: 1, width: '35ch' },
+                        '& .MuiTextField-root': {
+                            m: 1,
+                            width: '95%',
+                        },
                     }}
                     noValidate
                     autoComplete="off"
@@ -163,7 +166,10 @@ export default function Form({ handleClose, setDialogBox }) {
                     </div>
                     <div>
                         {validation.batch ?
-                            <FormControl required sx={{ ml: 1, width: '35ch' }}>
+                            <FormControl required sx={{
+                                width: '95% ',
+                                m: 1
+                            }}>
                                 <InputLabel id="demo-simple-select-label">Batch</InputLabel>
                                 <Select
                                     labelId="demo-simple-select-required-label"
@@ -198,12 +204,26 @@ export default function Form({ handleClose, setDialogBox }) {
                     display: "flex",
                     justifyContent: "space-between",
                     width: "100%",
-                    margin: "10px 24px"
+                    margin: "0px 24px 5px 24px"
                 }}>
-                    <Button variant="contained" autoFocus onClick={handleClose}>
+                    <Button
+                        variant="contained"
+                        autoFocus
+                        onClick={handleClose}
+                        sx={{
+                            width: '25%'
+                        }}
+                    >
                         Close
                     </Button>
-                    <Button variant="contained" autoFocus onClick={handleSubmit}>
+                    <Button
+                        variant="contained"
+                        autoFocus
+                        onClick={handleSubmit}
+                        sx={{
+                            width: '60%',
+                        }}
+                    >
                         Submit & Pay
                     </Button>
                 </div>

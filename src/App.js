@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Homepage from './components/Homepage';
 import { Typography } from '@mui/material';
@@ -7,10 +6,11 @@ function App() {
   return (
     <div className="App">
       <Typography variant='h2' sx={{
+        p: 2,
         pt: {
-          xs: 9,
+          xs: 6,
           sm: 16,
-          md: 12,
+          md: 13,
         },
         fontWeight: 'bolder',
         fontSize: {
@@ -18,7 +18,7 @@ function App() {
           sm: '3rem',
           md: '4rem',
         },
-        fontFamily: 'cursive',
+        fontFamily: 'Segoe UI',
         lineHeight: {
           xs: '3.5rem',
           sm: '2rem',

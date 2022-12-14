@@ -92,7 +92,7 @@ export default function Payment({ handleClose, setDialogBox }) {
                 <Box
                     component="form"
                     sx={{
-                        '& .MuiTextField-root': { m: 1, width: '35ch' },
+                        '& .MuiTextField-root': { m: 1, width: '95%' },
                     }}
                     noValidate
                     autoComplete="off"
@@ -194,10 +194,22 @@ export default function Payment({ handleClose, setDialogBox }) {
                     width: "100%",
                     margin: "10px 24px"
                 }}>
-                    <Button variant="contained" autoFocus onClick={() => { setDialogBox("form") }}>
+                    <Button
+                        variant="contained"
+                        autoFocus
+                        sx={{
+                            width: '25%',
+                        }}
+                        onClick={() => { setDialogBox("form") }}>
                         Back
                     </Button>
-                    <Button variant="contained" autoFocus onClick={handleSubmit}>
+                    <Button
+                        variant="contained"
+                        autoFocus
+                        onClick={handleSubmit}
+                        sx={{
+                            width: '60%',
+                        }}>
                         Click to Proceed
                     </Button>
                 </div>

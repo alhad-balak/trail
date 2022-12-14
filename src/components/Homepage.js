@@ -61,6 +61,8 @@ export default function Homepage() {
                 open={open}
                 onClose={handleClose}
                 TransitionComponent={Transition}
+                maxWidth="sm"
+                fullWidth
             >
 
                 {dialogBox === "form" ?

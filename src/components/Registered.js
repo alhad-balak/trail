@@ -24,11 +24,11 @@ export default function Registered({ handleClose, setDialogBox }) {
                     autoComplete="off"
                 >
                     <center>
-                        <CheckCircleOutlineOutlinedIcon style={{ textAlign: "center", color: "green", fontSize: "100px", textAlign: "center" }} />
+                        <CheckCircleOutlineOutlinedIcon style={{ textAlign: "center", color: "green", fontSize: "100px" }} />
                     </center>
                     <br></br>
-                    <Box>
-                        Your Admission process has been completed successfully. Class details has been sent by SMS to your registered mobile number.
+                    <Box sx={{ textAlign: "center" }}>
+                        Your admission form has been submitted successfully. Class details has been sent by SMS to your registered mobile number.
                     </Box>
                 </Box>
             </DialogContent>
