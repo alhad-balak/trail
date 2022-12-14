@@ -1,6 +1,40 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+# [ADMISSION FORM APP](https://yoga-form-abhinavkg.vercel.app/) for Yoga Classes
+
+## INTRODUCTION
+This react app is built to take admission in **Yoga classes** by filling the admission form and making payment on monthly. To begin the process, user has to click on `REGISTER NOW!` button. 
+
+## TECHNOLOGY USED
+<ol>
+  <li>React.js</li>
+  <li>Node.js</li>
+  <li>Express.js</li>
+  <li>MySQL</li>
+  <li>Material UI</li>
+</ol>
+
+## ER DIAGRAM (including to be added features)
+![ERD](https://user-images.githubusercontent.com/84512702/207719279-7c8d80c4-94ed-4b4c-aa52-6dac2a5f0478.png)
+
+## FEATURES
+<ul>
+  <li>Fully Mobile reponsive web app</li> 
+  <li>Accept user data and check basic validations like age (between 18 to 65, inclusive), a valid mobile number, and name.</li>
+  <li>Store data in the database.</li>
+  <li>Payment option is added. (Mock completed Payment() is used)</li>
+  <li>Only available batch will be given to chose.</li>
+  <li>Validation will be performed after each entry to avoid mock registration/admission.</li>
+  <li>Proper algorithm is used to avoid unnecessary delay in process.</li>
+</ul>
+
+## SCREENSHOTS
+
+## FEATURES TO BE ADDED
+
+
+
+<hr>
 
 ## Available Scripts
 
