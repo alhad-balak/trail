@@ -47,6 +47,16 @@ app.post("/", (req, res) => {
     });
 });
 
+
+if (process.env.NODE_ENV === 'production') {
+    const path = require('path');
+
+    app.get('/', (req, res) => {
+        app.use(express.static(path.join(__dirname, '../build')));
+        res.sendFile(path.join(__dirname, '../build', 'index.html'));
+    })
+}
+
 app.listen(5000, () => {
     console.log("Server is running on port 5000");
 });
