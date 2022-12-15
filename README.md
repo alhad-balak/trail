@@ -22,6 +22,8 @@ This react app is built to take admission in **Yoga classes** by filling the adm
   <li>Fully reponsive web app.</li> 
   <li>Accept user data and check basic validations like age (between 18 to 65, inclusive), a valid mobile number, and name.</li>
   <li>Store data in the database.</li>
+  <li>Date will added from backend to avoid unwanted manipulation.</li>
+  <li>Duplicate admission is restricted from backend.</li> 
   <li>Payment option is added. (Mock completed Payment() is used)</li>
   <li>Only available batch will be given to chose.</li>
   <li>Validation will be performed after each entry to avoid mock registration/admission.</li>
