@@ -3,14 +3,15 @@ const app = express();
 
 const connection = require("./config.js");
 
-// app.get('/', (req, res) => {
-//     connection.query("SELECT * from yogaform", function (err, result) {
-//         if (err)
-//             res.send(err);
-//         else
-//             res.send(result);
-//     });
-// });
+app.get('/', (req, res) => {
+    connection.query("SELECT * from yogaform", function (err, result) {
+        if (err)
+            res.send(err);
+        else
+            res.send("Hey! I am working");
+        // res.send(result);
+    });
+});
 
 const cors = require("cors");
 const corsOptions = {
