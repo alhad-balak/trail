@@ -54,17 +54,17 @@ const app = express();
 
 const mysql_pool = require("./config.js");
 
-// app.get('/api', (req, res) => {
-//     mysql_pool.getConnection(function (err, connection) {
-//         connection.query("SELECT * from yogaform", function (err, result) {
-//             if (err)
-//                 res.send(err);
-//             else
-//                 res.send(result);
-//             res.send("Hey! I am working");
-//         });
-//     });
-// });
+app.get('/', (req, res) => {
+    mysql_pool.getConnection(function (err, connection) {
+        connection.query("SELECT * from yogaform", function (err, result) {
+            if (err)
+                res.send(err);
+            else
+                // res.send(result);
+            res.send("Hey! I am working");
+        });
+    });
+});
 
 const cors = require("cors");
 const corsOptions = {
