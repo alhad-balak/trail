@@ -17,12 +17,12 @@ connection.connect(function (err) {
 });
 
 // // Cheecing if the data can be retrived from the database.
-connection.query("SELECT * from yogaform", function (err, result, fields) {
-    if (err)
-        console.log(err);
-    else
-        console.log(result);
-});
+// connection.query("SELECT * from yogaform", function (err, result, fields) {
+//     if (err)
+//         console.log(err);
+//     else
+//         console.log(result);
+// });
 
 
 module.exports = connection;
