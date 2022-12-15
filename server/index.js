@@ -6,25 +6,30 @@ const mysql_pool = require("./config.js");
 
 app.get('/', (req, res) => {
     mysql_pool.getConnection(function (err, connection) {
+        if (err)
+            res.send("Error occured!");
+        else {
+            console.log("Database Connected");
+        }
         connection.query("SELECT * from yogaform", function (err, result) {
             if (err)
                 res.send(err);
             else {
-                console.log(result);
+                // console.log(result);
                 res.send("Hey! I am working");
             }
         });
     });
 });
 
-// const cors = require("cors");
-// const corsOptions = {
-//     origin: '*',
-//     credentials: true,            //access-control-allow-credentials:true
-//     optionSuccessStatus: 200,
-// }
+const cors = require("cors");
+const corsOptions = {
+    origin: '*',
+    credentials: true,            //access-control-allow-credentials:true
+    optionSuccessStatus: 200,
+}
 
-// app.use(cors(corsOptions)) // Use this after the variable declaration
+app.use(cors(corsOptions)) // Use this after the variable declaration
 
 app.use(express.json());
 app.post("/", (req, res) => {

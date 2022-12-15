@@ -8,21 +8,4 @@ const mysql_pool = mysql.createPool({
     database: "abhinavDB",
 });
 
-console.log("Database ");
-const express = require('express');
-const e = require("express");
-const app = express();
-
-app.get('/', (req, res) => {
-    mysql_pool.getConnection(function (err, connection) {
-        if (err)
-            res.send("Error occured!");
-        else {
-
-            console.log("Database Connected");
-        }
-
-    });
-
-});
 module.exports = mysql_pool;
