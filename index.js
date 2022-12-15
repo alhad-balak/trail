@@ -17,6 +17,7 @@ app.get('/', (req, res) => {
             else {
                 // console.log(result);
                 res.send("Hey! I am working");
+                return result;
             }
         });
     });
@@ -48,6 +49,7 @@ app.post("/", (req, res) => {
                 // res.send(result);
                 console.log("Data inserted into the table");
                 res.send("Data inserted");
+                return result;
             }
         });
     });
