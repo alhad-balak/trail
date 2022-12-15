@@ -1,12 +1,44 @@
 const mysql = require("mysql");
 
-const connection = mysql.createConnection({
+const mysql_pool = mysql.createPool({
+    connectionLimit: 10,
     host: "localhost",
     user: "root",
     password: "",
     database: "abhinavDB",
-    multipleStatements: true
 });
+
+console.log("Database ");
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+    mysql_pool.getConnection(function (err, connection) {
+        if (err)
+            throw err;
+        connection.query("SELECT * from yogaform", function (err, result) {
+            if (err)
+                console.log("Error");
+            else {
+                console.log("Database Connected");
+                // res.send(result);
+            }
+        });
+
+    });
+
+});
+module.exports = mysql_pool;
+
+// const mysql = require("mysql");
+
+// const connection = mysql.createConnection({
+//     host: "localhost",
+//     user: "root",
+//     password: "",
+//     database: "abhinavDB",
+//     multipleStatements: true
+// });
 
 //To check if the database is connected.
 // connection.connect(function (err) {
@@ -25,4 +57,4 @@ const connection = mysql.createConnection({
 // });
 
 
-module.exports = connection;
+// module.exports = connection;
