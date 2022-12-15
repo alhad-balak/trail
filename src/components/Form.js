@@ -17,10 +17,23 @@ export default function Form({ handleClose, setDialogBox }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Form Submitted");
         checkValidation();
     };
 
+    const convertBatchToString = (batch) => {
+        switch (batch) {
+            case 67:
+                return "6 AM - 7 AM";
+            case 78:
+                return "7 AM - 8 AM";
+            case 89:
+                return "8 AM - 9 AM";
+            case 56:
+                return "5 PM - 6 PM";
+            default:
+                return "Not decided";
+        }
+    }
     const checkValidation = () => {
         let name = details.name;
         let age = details.age;
@@ -31,7 +44,23 @@ export default function Form({ handleClose, setDialogBox }) {
         let mobilenumberValidation = /^[0-9]{10}$/.test(mobilenumber);
         let batchValidation = true;
         if (nameValidation && ageValidation && mobilenumberValidation && batchValidation) {
-            setDialogBox("payment");
+
+            const postData = { ...details, fee: 500, batch: convertBatchToString(details.batch) };
+            fetch("http://localhost:5000/", {
+                method: "POST",
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(postData)
+            }).then((resp) => {
+                console.log(resp);
+                console.log("Form Submitted");
+                setDialogBox("payment");
+            }).catch((err) => {
+                alert(err);
+                console.warn(err);
+            });
         }
         else {
             setValidation({

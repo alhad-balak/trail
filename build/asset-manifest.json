@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.04b48a70.css",
-    "main.js": "/static/js/main.47d98270.js",
+    "main.js": "/static/js/main.59c7e4ec.js",
     "static/js/787.c71c28d4.chunk.js": "/static/js/787.c71c28d4.chunk.js",
     "static/media/yoga-class.jpg": "/static/media/yoga-class.26673aaa1dc67ffd0dc0.jpg",
     "index.html": "/index.html",
     "main.04b48a70.css.map": "/static/css/main.04b48a70.css.map",
-    "main.47d98270.js.map": "/static/js/main.47d98270.js.map",
+    "main.59c7e4ec.js.map": "/static/js/main.59c7e4ec.js.map",
     "787.c71c28d4.chunk.js.map": "/static/js/787.c71c28d4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.04b48a70.css",
-    "static/js/main.47d98270.js"
+    "static/js/main.59c7e4ec.js"
   ]
 }

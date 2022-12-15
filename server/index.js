@@ -1,43 +1,47 @@
-console.log("Welcome back, baby!");
-
-const express = require("express");
+const express = require('express');
 const app = express();
-const db = require("./db");
 
-app.get('/', (req, res) => {
-    res.send('Welcome Abhinav!');
-});
-app.post('/api', (req, res) => {
-    console.log("Welcome Abhinav!");
+const connection = require("./config.js");
+
+// app.get('/', (req, res) => {
+//     connection.query("SELECT * from yogaform", function (err, result) {
+//         if (err)
+//             res.send(err);
+//         else
+//             res.send(result);
+//     });
+// });
+
+const cors = require("cors");
+const corsOptions = {
+    origin: '*',
+    credentials: true,            //access-control-allow-credentials:true
+    optionSuccessStatus: 200,
+}
+
+app.use(cors(corsOptions)) // Use this after the variable declaration
+
+app.use(express.json());
+app.post("/", (req, res) => {
+
     const today = new Date();
     const todayDate = (today.getFullYear()) + '-' + (today.getMonth() + 1) + '-' + (today.getDate());
-    // const data = {
-    //     name: req.body.name,
-    //     age: req.body.age,
-    //     batch: req.body.batch,
-    //     fee: req.body.fee,
-    //     mobilenumber: req.body.mobilenumber,
-    //     date: todayDate
-    // };
-    const data = {
-        name: "Rajendra",
-        age: 20,
-        batch: "5PM - 6PM",
-        fee: 500,
-        mobilenumber: 1234452890,
-        date: todayDate
-    };
 
-    console.log(data);
-    db.query('INSERT INTO yogaform SET ?', data, (err, result) => {
+    const data = { ...req.body, date: todayDate };
+
+    connection.query('INSERT INTO yogaform SET ?', data, (err, result) => {
         if (err) {
-            console.log(err);
+            // console.log(err);
+            res.send(err);
         }
         else {
-            res.send(result);
+            // res.send(result);
+            console.log("Data inserted into the table");
             res.send("Data inserted");
         }
     });
-
 });
-app.listen(5000, () => console.log("Server running on 5000"));
+
+app.listen(5000, () => {
+    console.log("Server is running on port 3000");
+});
